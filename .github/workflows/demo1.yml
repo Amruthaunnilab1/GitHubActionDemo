@@ -6,9 +6,15 @@ jobs:
     steps:
       - name: checkout Repo
         uses: actions/checkout@v6
-      - name: my-step
-        run: echo "Hello World!"
-      - name: List files
-        run: ls
+      - name: List Repo Files
+        run: ls -ltra
+      - name: Executing shell script
+        run: 
+          chmod +x ascii-script.sh
+          ./ascii-script.sh
+    #  - name: my-step
+     #   run: echo "Hello World!"
+     # - name: List files
+     #   run: ls
     #  - name: Read file
      #   run: cat README.md  
